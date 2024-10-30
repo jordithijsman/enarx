@@ -330,7 +330,7 @@ impl LoginContext<'_> {
         )
         .set_auth_type(AuthType::RequestBody);
 
-        let audience = format!("https://{host}/");
+        let audience = format!("https://{host}");
         let token = match oidc_flow {
             OidcLoginFlow::DeviceAuthorization => {
                 let dev_auth_url =
